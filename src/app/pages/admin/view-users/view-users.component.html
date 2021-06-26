@@ -1,0 +1,29 @@
+<div>
+        <mat-spinner *ngIf='k'  class="loder" style="top: 50%;left:50%"></mat-spinner>
+</div>
+
+<div *ngIf='!k'>
+<div *ngFor="let c of allusers">
+<mat-card style="margin-top: 10px;" *ngIf="c.authorities[0].authority=='NORMAL'">
+    <mat-list>
+        
+        <mat-list-item >
+            <mat-icon mat-list-icon>person</mat-icon>
+            <div  mat-line>Username: {{c.username}}</div>
+            <div mat-line >Role: {{c.authorities[0].authority}}
+                
+            </div>
+            <button [routerLink]="'/admin/updateuser/'+c.id" mat-raised-button color="accent" class="ml20">Update</button>
+            <button mat-raised-button color="warn" (click)="delete(c.id)" class="ml20">Delete</button>
+            
+                
+        </mat-list-item>
+    </mat-list>
+    
+</mat-card>
+
+</div>
+<div class="container text-center mt20">
+    <button  routerLink="/admin/addnewuser" mat-raised-button color="accent">Add New User</button>
+</div>
+</div>

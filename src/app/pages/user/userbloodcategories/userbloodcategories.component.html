@@ -1,0 +1,27 @@
+
+<div>
+    <mat-spinner *ngIf='k'  class="loder" style="top: 50%;left:50%"></mat-spinner>
+</div>
+<div *ngIf='!k' >
+<mat-card  class="mt10 mr20 ml20" *ngFor="let c of categories" >
+    <mat-card-header>
+        <div mat-card-avatar class="avatar"></div>
+        <mat-card-title>
+            {{c.title}}
+        </mat-card-title>
+        <mat-card-subtitle>{{c.description}}</mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-actions>
+        <button [routerLink]="'/user/view-donors/'+c.cid+'/'+c.title" mat-stroked-button color="primary">ViewDonors</button>
+       
+
+    </mat-card-actions>
+    
+        
+    
+</mat-card>
+
+
+</div>
+

@@ -1,0 +1,89 @@
+<h2 style="margin-top: 10px;">Dashboard</h2>
+<div class="container" class="mt20">
+    <div class="row">
+        <div class="col-md-4">
+            <mat-card style="background-color: #4db6ac;">
+                <mat-icon  style="font-size: 30px;" mat-list-icon>people</mat-icon>
+                <mat-card-title>{{d}}</mat-card-title>
+                <mat-card-subtitle style="font-size: 19px;">Donors</mat-card-subtitle>
+
+
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card style="background-color: #26c6da;">
+                <mat-icon style="font-size: 30px;" mat-list-icon>people</mat-icon>
+                <mat-card-title>{{c}}</mat-card-title>
+                <mat-card-subtitle style="font-size: 19px;">Users</mat-card-subtitle>
+
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card style="background-color: #ef5350;">
+                <mat-icon style="font-size: 30px;" mat-list-icon>bloodtype</mat-icon>
+                <mat-card-title>{{e}}</mat-card-title>
+                <mat-card-subtitle style="font-size: 19px;">Expired samples</mat-card-subtitle>
+            </mat-card>
+        </div>
+    </div>
+
+
+    <div   class="row" style="margin-top: 50px;">
+        <div class="col-md-4">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="avatar"></div>
+                  <mat-card-title>Blood Types</mat-card-title>
+                  <mat-card-subtitle>Available Blood Types</mat-card-subtitle>
+                </mat-card-header>
+               
+               <br>
+               <br>
+                <mat-card-content>
+                 
+                </mat-card-content>
+                <mat-card-actions>
+                  <button routerLink="/admin/viewcategories" mat-button>View</button>
+                  <button (click)="opendialog()" mat-button>Add</button>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example"></div>
+                  <mat-card-title>Avalable Donors</mat-card-title>
+                  <mat-card-subtitle>Contains Donors Information</mat-card-subtitle>
+                </mat-card-header>
+               
+                <mat-card-content>
+                 <br>
+                 <br>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>View</button>
+                  <button mat-button>Add</button>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="ex"></div>
+                  <mat-card-title>Users</mat-card-title>
+                  <mat-card-subtitle>Registred Users</mat-card-subtitle>
+                </mat-card-header>
+                
+                <mat-card-content>
+                  <br>
+                  <br>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button routerLink="/admin/viewusers" mat-button>View</button>
+                  <button routerLink="/admin/addnewuser" mat-button>Add</button>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+    </div>
+    
+</div>

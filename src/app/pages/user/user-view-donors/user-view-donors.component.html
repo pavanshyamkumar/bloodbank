@@ -1,0 +1,35 @@
+
+
+<div *ngFor="let c of getdata"> 
+<mat-card  class="mt10 mr20 ml20" *ngIf="c.noofdaystoexpire>0" >
+    
+    <mat-card-header>
+        <div *ngIf="c.sex=='Male'" mat-card-avatar class="avatar"></div>
+        <div *ngIf="c.sex=='Female'" mat-card-avatar class="ava"></div>
+        <mat-card-title>
+            {{c.name}}
+
+        </mat-card-title>
+        <mat-card-subtitle>{{Ctitle}}</mat-card-subtitle>
+      
+    </mat-card-header>
+    
+    <mat-card-actions>
+        <button [routerLink]="'/user/view-donordetails/'+c.did" mat-flat-button color="accent">View Details</button>
+       
+       
+        
+        <button style="float: right;" mat-stroked-button color="primary" class="ml20">Expiresin: {{c.noofdaystoexpire}}days</button>
+    </mat-card-actions>
+    
+    
+    
+        
+    
+</mat-card>
+</div>
+
+
+
+
+

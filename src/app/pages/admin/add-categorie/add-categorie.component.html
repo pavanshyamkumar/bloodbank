@@ -1,0 +1,21 @@
+<mat-card>
+    <div mat-subheader><h1>Add New Bloodtype</h1></div>
+    <form (ngSubmit)=formSubmit()>
+        <mat-form-field style="width: 100%;" appearance="outline">
+            <mat-label>Title</mat-label>
+            <input [(ngModel)]="category.title" type="text" name="title" matInput placeholder="enter the title">
+        </mat-form-field>
+        <mat-form-field style="width: 100%;" appearance="outline">
+            <mat-label>Description</mat-label>
+            <input  [(ngModel)]="category.description" type="text" name="decription" matInput placeholder="enter the decription">
+        </mat-form-field>
+       
+        <div class="container text-center" style="margin-top: 15px;">
+            <button mat-raised-button color="primary" >Add</button>
+            <button mat-raised-button color="warn" mat-dialog-close class="ml20">Cancel</button>
+            
+        </div>
+       
+    </form>
+   
+</mat-card>

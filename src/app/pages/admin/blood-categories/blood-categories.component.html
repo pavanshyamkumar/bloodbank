@@ -1,0 +1,28 @@
+<div>
+    <mat-spinner *ngIf='k'  class="loder" style="top: 50%;left:50%"></mat-spinner>
+</div>
+<div *ngIf='!k' >
+<mat-card  class="mt10 mr20 ml20" *ngFor="let c of categories" >
+    <mat-card-header>
+        <div mat-card-avatar class="avatar"></div>
+        <mat-card-title>
+            {{c.title}}
+        </mat-card-title>
+        <mat-card-subtitle>{{c.description}}</mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-actions>
+        <button [routerLink]="'/admin/view-donors/'+c.cid+'/'+c.title" mat-flat-button color="accent">ViewDonors</button>
+        <button [routerLink]="'/admin/update/'+c.cid" mat-stroked-button color="primary" class="ml20">Update</button>
+        <button mat-flat-button color="warn" (click)="delete(c.cid)" class="ml20">Delete</button>
+
+    </mat-card-actions>
+    
+        
+    
+</mat-card>
+
+<div class="container text-center mt20">
+    <button  (click)="oncreate()" mat-raised-button color="primary">AddBloodType</button>
+</div>
+</div>

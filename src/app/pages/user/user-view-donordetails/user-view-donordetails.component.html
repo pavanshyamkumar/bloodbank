@@ -1,0 +1,67 @@
+
+<div class="row">
+<div class="col-md-4">
+<mat-card style="margin-top: 20px;">
+
+    <div class="container text-center">
+                    
+        <img src="../../../../assets/man.png" class="profile-image" alt=""> 
+        <h1>{{donor.name}}</h1>
+           
+            <mat-card-subtitle style="font-size: 19px;">{{donor.category.title}}</mat-card-subtitle>
+
+        <div class="text-center">
+            <button mat-raised-button color="primary">Contact</button>
+            
+        </div>
+    
+    </div>
+</mat-card>
+</div>
+<div class="col-md-8" style="margin-top: 20px;">
+    <mat-card>
+        <mat-list>
+            <mat-list-item> 
+                <div mat-line ><b>FullName</b></div>
+                <div>{{donor.name}}</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item> 
+                <div mat-line ><b>Age</b></div>
+                <div>{{donor.age}}</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item> 
+                <div mat-line ><b>Sex</b></div>
+                <div>{{donor.sex}}</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item> 
+                <div mat-line ><b>Address</b></div>
+                <div>{{donor.address}}</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+            <mat-list-item> 
+                <div mat-line ><b>Phone Number</b></div>
+                <div>{{donor.phone}}</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+            <mat-list-item> 
+                <div mat-line ><b>City</b></div>
+                <div>{{donor.city}}</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+            <mat-list-item> 
+                <div mat-line ><b>State</b></div>
+                <div>{{donor.state}}</div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+           </mat-list>
+    </mat-card>
+</div>
+
+</div>

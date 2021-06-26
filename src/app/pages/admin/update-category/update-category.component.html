@@ -1,0 +1,23 @@
+<mat-card>
+                
+
+    <h2 class="text-center">Update Category !!</h2>
+
+  
+    <form (ngSubmit)="submit()">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input required [(ngModel)]="getdata.title"  name="title" type="text" matInput placeholder="Enter here">
+          </mat-form-field>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>description</mat-label>
+            <textarea required [(ngModel)]="getdata.description" rows="15"  name="description" matInput placeholder="Username"></textarea>
+            <mat-hint>Valid Username !!</mat-hint>
+          </mat-form-field>
+          <div class="container text-center">
+              <button type="submit" mat-raised-button color="primary">Update</button>
+              <button style="margin-left: 20px;" mat-raised-button color="accent">Clear</button>
+          </div>
+    </form>
+  </mat-card>
+  {{ getdata | json}}

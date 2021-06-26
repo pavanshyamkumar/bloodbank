@@ -1,0 +1,40 @@
+<div>
+    <mat-spinner *ngIf='k'  class="loder" style="top: 50%;left:50%"></mat-spinner>
+</div>
+
+<div *ngIf='!k'>
+<div  *ngFor="let c of getdata"> 
+<mat-card  class="mt10 mr20 ml20" *ngIf="c.noofdaystoexpire>0" >
+    
+    <mat-card-header>
+        <div *ngIf="c.sex=='Male'" mat-card-avatar class="avatar"></div>
+        <div *ngIf="c.sex=='Female'" mat-card-avatar class="ava"></div>
+        <mat-card-title>
+            {{c.name}}
+
+        </mat-card-title>
+        <mat-card-subtitle>{{c.category.title}}</mat-card-subtitle>
+
+
+      
+    </mat-card-header>
+    
+    <mat-card-actions>
+        <button mat-flat-button color="accent">View Details</button>
+        <button [routerLink]="'/admin/update-donor/'+c.did" mat-flat-button color="primary"  class="ml20">Update</button>
+        <button mat-flat-button color="warn"(click)="delete(c.did)" class="ml20">Delete</button>
+        <button style="float: right;"  mat-stroked-button color="primary" class="ml20">Expiresin: {{c.noofdaystoexpire}}days</button>
+
+    </mat-card-actions>
+    
+    
+        
+    
+</mat-card>
+</div>
+</div>
+
+
+
+
+

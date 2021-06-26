@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+
+              <mat-card>
+                
+
+                <h2 class="text-center">UPDATE USER !!</h2>
+
+                <!--{{user | json}}-->
+                <form (ngSubmit)="formSubmit()">
+
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>User Name</mat-label>
+                        <input required [(ngModel)]="userupdate.username"  name="username" matInput placeholder="Username">
+                        <mat-hint>Valid Username !!</mat-hint>
+                      </mat-form-field>
+
+                      
+
+
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input required [(ngModel)]="userupdate.firstName"  name="firstName" type="text" matInput placeholder="Enter here">
+                      </mat-form-field>
+
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input required [(ngModel)]="userupdate.lastName" name="lastName" type="text" matInput placeholder="Enter here">
+                      </mat-form-field>
+
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input required [(ngModel)]="userupdate.email" name="email" type="email" matInput placeholder="Enter here">
+                      </mat-form-field>
+
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Phone Number</mat-label>
+                        <input required [(ngModel)]="userupdate.phone" name="phone" type="number" matInput placeholder="Enter here">
+                      </mat-form-field>
+
+                      <div class="container text-center">
+                          <button type="submit" mat-raised-button color="primary">Update</button>
+                          <button style="margin-left: 20px;" mat-raised-button color="accent">Clear</button>
+                      </div>
+                </form>
+              </mat-card>
+              {{ userupdate | json}}
+
+
+
+
+            
